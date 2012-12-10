@@ -10,6 +10,7 @@
  * Handles detecting mobile browsers.
  * Results are stored locally for caching calls within the same request, and
  * stored in a cookie for caching across requests.
+ * Detection regex used from http://detectmobilebrowsers.com/
  *
  * Install as an application component, in your config:
  *
@@ -20,16 +21,18 @@
  * ),
  *
  * You can get the current user preference like this:
- * The first time it is called, it will detect if user is mobile or not.
  *
  * if (Yii::app()->detectMobileBrowser->showMobile) {
  *     // do something
  * }
  *
- * To explicitly override the value (example: full-site link for mobile user),
- * you can set this:
+ * By default it will use the automatically detected value.
+ * You can also set the preference yourself like this:
  *
- * Yii::app()->detectMobileBrowser->showMobile = false;
+ * public function actionShowMobile() {
+ *     Yii::app()->detectMobileBrowser->showMobile = true;
+ *     $this->redirect(array('/site/index'));
+ * }
  *
  */
 class XDetectMobileBrowser extends CApplicationComponent
