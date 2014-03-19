@@ -1,10 +1,14 @@
 yii-detectmobilebrowser
 =======================
 
-Handles detecting mobile browsers.
-Results are stored locally for caching calls within the same request, and
+Handles detecting mobile browsers. Results are stored locally for caching calls within the same request, and
 stored in a cookie for caching across requests.
+
 Detection regex used from http://detectmobilebrowsers.com/
+
+## Requirements
+
+Tested on Yii 1.1.8 - 1.1.14, should work on all versions.
 
 ## Installation
 
