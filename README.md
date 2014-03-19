@@ -6,9 +6,11 @@ Results are stored locally for caching calls within the same request, and
 stored in a cookie for caching across requests.
 Detection regex used from http://detectmobilebrowsers.com/
 
+## Installation
+
 Install as an application component, in your config:
 
-```
+```php
 'components' => array(
    'detectMobileBrowser' => array(
        'class' => 'ext.yii-detectmobilebrowser.XDetectMobileBrowser',
@@ -16,9 +18,11 @@ Install as an application component, in your config:
 ),
 ```
 
+## Usage
+
 You can get the current user preference like this:
 
-```
+```php
 if (Yii::app()->detectMobileBrowser->showMobile) {
     // do something
 }
@@ -27,7 +31,7 @@ if (Yii::app()->detectMobileBrowser->showMobile) {
 By default it will use the automatically detected value.
 You can also set the preference yourself like this:
 
-```
+```php
 public function actionShowMobile() {
     Yii::app()->detectMobileBrowser->showMobile = true;
     $this->redirect(array('/site/index'));
