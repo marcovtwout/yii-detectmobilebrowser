@@ -21,7 +21,17 @@ class XDetectMobileBrowser extends CApplicationComponent
      * Cookie name for storing detected result
      */
     const COOKIE_NAME_IS = 'isMobile';
- 
+
+    /**
+     * @var bool
+     */
+    public $secure = false;
+
+    /**
+     * @var bool
+     */
+    public $httpOnly = false;
+
     /**
      * @var boolean show mobile version to the client?
      */
@@ -105,9 +115,11 @@ class XDetectMobileBrowser extends CApplicationComponent
         $cookie = new CHttpCookie($cookieName, (int)$value); // bool to int
         $cookie->expire = time()+(3600*24*365); //1 year
         $cookie->path = Yii::app()->baseUrl . '/';
+        $cookie->secure = $this->secure;
+        $cookie->httpOnly = $this->httpOnly;
         Yii::app()->request->cookies[$cookieName] = $cookie;
     }
- 
+
     /**
 	 * Performs a regexp check on the User Agent string to determine if this is a mobile browser.
 	 * I kindly asked them to put their code on GitHub, but no response.
