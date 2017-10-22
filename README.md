@@ -22,6 +22,18 @@ Install as an application component, in your config:
 ),
 ```
 
+Install and set http only and secure cookies:
+
+```php
+'components' => array(
+   'detectMobileBrowser' => array(
+       'class' => 'ext.yii-detectmobilebrowser.XDetectMobileBrowser',
+       'secure' => true,
+       'httpOnly' => true,
+    ),
+),
+```
+
 ## Usage
 
 You can get the current user preference like this:

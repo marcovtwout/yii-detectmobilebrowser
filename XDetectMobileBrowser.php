@@ -23,12 +23,12 @@ class XDetectMobileBrowser extends CApplicationComponent
     const COOKIE_NAME_IS = 'isMobile';
 
     /**
-     * @var bool
+     * @var bool set secure cookies
      */
     public $secure = false;
 
     /**
-     * @var bool
+     * @var bool set http only cookies
      */
     public $httpOnly = false;
 
