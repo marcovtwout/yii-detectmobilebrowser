@@ -18,18 +18,8 @@ Install as an application component, in your config:
 'components' => array(
    'detectMobileBrowser' => array(
        'class' => 'ext.yii-detectmobilebrowser.XDetectMobileBrowser',
-    ),
-),
-```
-
-Install and set http only and secure cookies:
-
-```php
-'components' => array(
-   'detectMobileBrowser' => array(
-       'class' => 'ext.yii-detectmobilebrowser.XDetectMobileBrowser',
-       'secure' => true,
-       'httpOnly' => true,
+       //'secure' => true,
+       //'httpOnly' => true,
     ),
 ),
 ```
