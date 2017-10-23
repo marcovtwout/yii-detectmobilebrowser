@@ -1,6 +1,4 @@
 {
   "name": "marcovtwout/yii-detectmobilebrowser",
-  "description": "Handles detecting mobile browsers",
-  "version": "1.2.0",
-  "authors": []
+  "description": "Handles detecting mobile browsers"
 }
